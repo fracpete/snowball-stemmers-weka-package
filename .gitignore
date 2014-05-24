@@ -15,8 +15,8 @@ hs_err_pid*
 *~
 *.swp
 
-# weka
+# weka package
 build
 dist
-
+doc
 
