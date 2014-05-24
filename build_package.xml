@@ -12,10 +12,8 @@
   <!-- set global properties for this build -->
   <property name="src" value="src/main/java"/>
   <property name="src-test" value="src/test/java"/>
-  <property name="src-latex" value="src/main/latex"/>
   <property name="lib" value="lib" />
   <property name="build" value="build"/>
-  <property name="build-latex" value="../../../../build"/>
   <property name="dist"  value="dist"/>
   <property name="doc"  value="doc"/>
   <property name="javac_max_memory" value="256m"/>
@@ -159,31 +157,7 @@
     </jar>
   </target>
 
-  <!-- Generate latex documentation -->
-  <target name="latex" depends="init_dist, compile" description="Generates the latex documentation">
-      <exec executable="pdflatex" dir="${src-latex}/manual">
-         <arg value="-output-directory"/>
-         <arg value="${build-latex}"/>
-         <arg value="manual.tex"/>
-      </exec>
-      <exec executable="pdflatex" dir="${src-latex}/manual">
-         <arg value="-output-directory"/>
-         <arg value="${build-latex}"/>
-         <arg value="manual.tex"/>
-      </exec>
-  </target>
-
-  <!-- Creates a zip file of the datasets -->
-  <target name="datasets" depends="init_dist" description="Create a zip file of the datasets in ./dist">
-    <zip destfile="${dist}/datasets.zip" basedir="src/site/resources" includes="datasets/**/*" />
-  </target>
-
-  <!-- Creates a zip file of the experiments -->
-  <target name="experiments" depends="init_dist" description="Create a zip file of the experiments in ./dist">
-    <zip destfile="${dist}/experiments.zip" basedir="src/site/resources" includes="experiments/**/*" />
-  </target>
-
-  <target name="make_package" depends="clean, latex, datasets, experiments, exejar" description="Make the package zip file. Run with -Dpackage=[package name]">
+  <target name="make_package" depends="clean, exejar" description="Make the package zip file. Run with -Dpackage=[package name]">
     <mkdir dir="${dist}/${package}"/>
     <copy todir="${dist}/${package}">
       <fileset dir="${dist}">
