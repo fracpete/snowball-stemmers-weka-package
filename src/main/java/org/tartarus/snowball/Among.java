@@ -1,8 +1,9 @@
 package org.tartarus.snowball;
 
 import java.lang.reflect.Method;
+import java.io.Serializable;
 
-public class Among {
+public class Among implements Serializable {
     public Among (String s, int substring_i, int result,
 		  String methodname, SnowballProgram methodobject) {
         this.s_size = s.length();
@@ -26,6 +27,6 @@ public class Among {
     public final char[] s; /* search string */
     public final int substring_i; /* index to longest matching substring */
     public final int result; /* result of the lookup */
-    public final Method method; /* method to use if substring matches */
+    public transient final Method method; /* method to use if substring matches */
     public final SnowballProgram methodobject; /* object to invoke method on */
 };
