@@ -60,14 +60,6 @@
           <name>performRelease</name>
           <value>true</value>
         </property>
-    <developer>
-      <id>bernhard</id>
-      <name>Bernhard Pfahringer</name>
-    </developer>
-    <developer>
-      <id>kurtd</id>
-      <name>Kurt Driessens</name>
-    </developer>
       </activation>
       <build>
         <plugins>
@@ -102,13 +94,13 @@
     <dependency>
       <groupId>nz.ac.waikato.cms.weka</groupId>
       <artifactId>weka-dev</artifactId>
-      <version>[3.7.10,)</version>
+      <version>[3.7.9,)</version>
     </dependency>
 
     <dependency>
       <groupId>nz.ac.waikato.cms.weka</groupId>
       <artifactId>weka-dev</artifactId>
-      <version>[3.7.10,)</version>
+      <version>[3.7.9,)</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
