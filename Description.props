@@ -29,7 +29,7 @@ License=GPL 3.0
 Description=Contains the snowball stemmers (http://snowball.tartarus.org/).
 
 # Package URL for obtaining the package archive (required)
-PackageURL=https://github.com/fracpete/snowball-stemmers-weka-package/releases/download/v.1.0.0/snowball-stemmers1.0.0.zip
+PackageURL=https://github.com/fracpete/snowball-stemmers-weka-package/releases/download/v.1.0.0/snowball-stemmers-1.0.0.zip
 
 # URL for further information
 URL=https://github.com/fracpete/snowball-stemmers-weka-package
