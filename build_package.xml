@@ -12,6 +12,7 @@
   <!-- set global properties for this build -->
   <property name="src" value="src/main/java"/>
   <property name="src-test" value="src/test/java"/>
+  <property name="res-test" value="src/test/resources"/>
   <property name="lib" value="lib" />
   <property name="build" value="build"/>
   <property name="dist"  value="dist"/>
@@ -106,6 +107,7 @@
     <!-- make this if it doesn't exist so that the compile_test task doesn't faile for 
          stuff that doesn't have test cases -->
     <mkdir dir="${src-test}"/>
+    <mkdir dir="${res-test}"/>
   </target>
 
   <!-- compile the testcases -->
@@ -126,6 +128,11 @@
           <include name="**/*.cost"/>
           <include name="**/*.xml"/>
           <include name="**/*.matrix"/>
+       </fileset>
+     </copy>
+     <copy todir="${build}/testcases" >
+       <fileset dir="${res-test}">
+          <include name="**/*.ref"/>
        </fileset>
      </copy>
   </target>
@@ -206,6 +213,7 @@
          <include name="src/**/*.cost"/>
          <include name="src/**/*.arff"/>
          <include name="src/**/*.matrix"/>
+         <include name="src/**/*.ref"/>
        </fileset>
     </copy>
     <zip destfile="${dist}/${package}.zip" 
@@ -236,6 +244,7 @@
       <include name="src/**/*.cost"/>
       <include name="src/**/*.arff"/>
       <include name="src/**/*.matrix"/>
+      <include name="src/**/*.ref"/>
       <include name="lib/**/*.jar"/>
     </jar>
   </target>
