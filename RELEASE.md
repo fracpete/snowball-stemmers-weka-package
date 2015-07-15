@@ -1,6 +1,9 @@
 How to make a release
 =====================
 
+Weka package
+------------
+
 * Run the following command to generate the package archive for version `1.0.0`:
 
   <pre>
@@ -10,4 +13,16 @@ How to make a release
 * Create a release tag on github (v1.0.0)
 * add release notes
 * upload package archive from `dist`
+
+
+Maven
+-----
+
+* Run the following command
+
+  <pre>
+  mvn --batch-mode release:prepare release:perform
+  </pre>
+
+* log into https://oss.sonatype.org and close/release artifacts
 
