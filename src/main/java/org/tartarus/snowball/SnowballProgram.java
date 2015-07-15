@@ -12,6 +12,8 @@ public class SnowballProgram implements Serializable {
 
     /**
      * Set the current string.
+     *
+     * @param value the word to stem
      */
     public void setCurrent(String value)
     {
@@ -25,6 +27,8 @@ public class SnowballProgram implements Serializable {
 
     /**
      * Get the current string.
+     *
+     * @return the stemmed word
      */
     public String getCurrent()
     {
