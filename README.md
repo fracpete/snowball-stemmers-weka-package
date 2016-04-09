@@ -4,6 +4,14 @@ snowball-stemmers-weka-package
 Weka package for the snowball stemmers (http://snowball.tartarus.org/).
 
 
+Releases
+--------
+
+* [1.0.1](https://github.com/fracpete/snowball-stemmers-weka-package/releases/download/v1.0.1/snowball-stemmers-1.0.1.zip)
+* [1.0.0](https://github.com/fracpete/snowball-stemmers-weka-package/releases/download/v1.0.0/snowball-stemmers-1.0.0.zip)
+
+
+
 How to use packages
 -------------------
 
