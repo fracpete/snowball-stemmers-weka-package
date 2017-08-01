@@ -3,6 +3,14 @@ snowball-stemmers-weka-package
 
 Weka package for the snowball stemmers (http://snowball.tartarus.org/).
 
+**OBSOLETE**
+
+This package is now maintained by the Weka maintainer. The code is available
+directly from the Weka subversion repository. Here is a direct link to the
+package's location in that repo:
+
+https://svn.cms.waikato.ac.nz/svn/weka/trunk/packages/external/snowball-stemmers/
+
 
 Releases
 --------
